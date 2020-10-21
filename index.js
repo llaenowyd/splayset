@@ -37,6 +37,7 @@ function rotateLeft(set) {
 
   //             l
   //           ╱   ╲
+  //          ╱     ╲
   //         ╱       ╲
   //       f           r
   //     ╱   ╲       ╱   ╲
@@ -46,9 +47,11 @@ function rotateLeft(set) {
   //
   //                   r
   //                 ╱   ╲
+  //                ╱     ╲
   //               ╱       ╲
   //             l           u
   //           ╱   ╲
+  //          ╱     ╲
   //         ╱       ╲
   //       f           o
   //     ╱   ╲
@@ -80,6 +83,7 @@ function rotateRight() {
 
   //             l
   //           ╱   ╲
+  //          ╱     ╲
   //         ╱       ╲
   //       f           r
   //     ╱   ╲       ╱   ╲
@@ -89,9 +93,11 @@ function rotateRight() {
   //
   //         f
   //       ╱   ╲
+  //      ╱     ╲
   //     ╱       ╲
   //   c           l
   //             ╱   ╲
+  //            ╱     ╲
   //           ╱       ╲
   //         i           r
   //                   ╱   ╲
