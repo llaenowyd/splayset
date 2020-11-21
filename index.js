@@ -1,8 +1,8 @@
 const mergeLeft = require('ramda/src/mergeLeft')
 
-// assume a set of numbers is all that's required
+// supposing a set of numbers is all that's required
 
-function defaultCompare(item1, item2) { return item1-item2 }
+function defaultCompare(item1, item2) { return item1 - item2 }
 
 function isEmpty(set) { return !set }
 
@@ -43,7 +43,7 @@ function rotateLeft(set) {
   //     ╱   ╲       ╱   ╲
   //   c       i   o       u
   //
-  //              ⇓
+  //             ⇓
   //
   //                   r
   //                 ╱   ╲
@@ -74,7 +74,7 @@ function linkRight(params) {
   return [left(set), leftLast, set]
 }
 
-function rotateRight() {
+function rotateRight(set) {
   // y = t->left;  /* rotate right */
   // t->left = y->right;
   // y->right = t;
@@ -113,7 +113,7 @@ function rotateRight() {
 //   - is empty: return the 'set' unmodified
 //   - otherwise does not contain the 'item': return the 'set', splayed to a neighbor element
 function splay(item, set) {
-  if (isEmpty(set)) return set
+  if (isEmpty(set)) return [-1, set]
 
   function splayStep(params) {
     let [set, leftLast, rightFirst] = params
@@ -188,3 +188,6 @@ function insert(item, set) {
 
 exports.has = has
 exports.insert = insert
+exports.splay = splay
+
+exports.test = process.env.NODE_ENV !== 'test' ? null : { linkLeft, linkRight, rotateLeft, rotateRight }
