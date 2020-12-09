@@ -7,7 +7,7 @@
     "doc": "doc"
   },
   "scripts": {
-    "test": "cross-env NODE_ENV=test mocha"
+    "test": "cross-env NODE_ENV=test mocha test/**/*.test.js"
   },
   "repository": {
     "type": "git",
